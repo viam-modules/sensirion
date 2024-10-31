@@ -1,4 +1,4 @@
-module module
+module sensirion
 
 go 1.23.0
 

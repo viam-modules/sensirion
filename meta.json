@@ -1,5 +1,6 @@
 {
-    "module_id": "viam:sensirion",
+  "$schema": "https://dl.viam.dev/module.schema.json",
+  "module_id": "viam:sensirion",
     "visibility": "public",
     "url": "https://github.com/viam-modules/sensirion",
     "description": "Go module for sensirion sht3xd sensor, compatible with Viam",
@@ -15,4 +16,4 @@
       "arch" : ["linux/arm64", "linux/amd64", "darwin/arm64"]
     },
     "entrypoint": "bin/sensirion"
-  }
+}
