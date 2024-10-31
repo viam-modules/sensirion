@@ -1,0 +1,18 @@
+{
+    "module_id": "viam:sensirion",
+    "visibility": "public",
+    "url": "https://github.com/viam-modules/sensirion",
+    "description": "Go module for sensirion sht3xd sensor, compatible with Viam",
+    "models": [
+      {
+        "api": "rdk:component:sensor",
+        "model": "viam:sensirion:sht3xd"
+      }
+    ],
+    "build": {
+      "build": "make module",
+      "path": "bin/module.tar.gz",
+      "arch" : ["linux/arm64", "linux/amd64", "darwin/arm64"]
+    },
+    "entrypoint": "bin/sensirion"
+  }
