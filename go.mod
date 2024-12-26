@@ -1,4 +1,4 @@
-module sensirion
+module github.com/viam-modules/sensirion
 
 go 1.23.0
 
