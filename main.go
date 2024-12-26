@@ -3,7 +3,8 @@ package main
 
 import (
 	"context"
-	"sensirion/sht3xd"
+
+	"github.com/viam-modules/sensirion/sht3xd"
 
 	"go.viam.com/rdk/components/sensor"
 	"go.viam.com/rdk/logging"
