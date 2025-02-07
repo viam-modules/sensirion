@@ -5,10 +5,10 @@ This [sensirion module](https://app.viam.com/module/viam/sensirion) implements a
 > [!NOTE]
 > Before configuring your sensor, you must [create a machine](https://docs.viam.com/cloud/machines/#add-a-new-machine).
 
-## Configure your sht3xd sensor
-
 Navigate to the [**CONFIGURE** tab](https://docs.viam.com/configure/) of your [machine](https://docs.viam.com/fleet/machines/) in the [Viam app](https://app.viam.com/).
 [Add sensor / viam:sensirion:sht3xd to your machine](https://docs.viam.com/configure/#components).
+
+## Configure your sht3xd sensor
 
 On the new component panel, copy and paste the following attribute template into your sensors’s attributes field:
 
