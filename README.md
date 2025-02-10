@@ -14,8 +14,7 @@ On the new component panel, copy and paste the following attribute template into
 
 ```json
 {
-  "i2c_bus": "<your-i2c-bus-index-on-board>",
-  "i2c_address": "<your-i2c-address>"
+  "i2c_bus": "0",
 }
 ```
 
@@ -28,20 +27,11 @@ The following attributes are available for `viam:sensirion:sht3xd` sensors:
 | `i2c_bus` | string | **Required** | The index of the I2C bus on the board that the sensor is wired to. |
 | `i2c_address` | string | Optional | The [I2C device address](https://learn.adafruit.com/i2c-addresses/overview) of the sensor. <br> Default: `0x44` |
 
-## Example configurations
-
-### `viam:sensirion:sht3xd`
+### Example configuration
 ```json
   {
-     "name": "<your-sensirion-sht3xd-sensor-name>",
-      "model": "viam:sensirion:sht3xd",
-      "type": "sensor",
-      "namespace": "rdk",
-      "attributes": {
-        "i2c_bus": "<your-i2c-bus-index-on-board>",
-        "i2c_address": "<your-i2c-address>"
-      },
-      "depends_on": []
+    "i2c_bus": "<your-i2c-bus-index-on-board>",
+    "i2c_address": "<your-i2c-address>"    
   }
 ```
 

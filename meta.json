@@ -9,7 +9,7 @@
         "api": "rdk:component:sensor",
         "model": "viam:sensirion:sht3xd",
         "markdown_link" : "README.md#configure-your-sht3xd-sensor",
-        "short_description" : "A Go module for sensirion sht3xd sensor"
+        "short_description" : "driver the sensirion sht3xd sensor for temperature and humidity"
       }
     ],
     "build": {
