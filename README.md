@@ -10,7 +10,7 @@ Navigate to the [**CONFIGURE** tab](https://docs.viam.com/configure/) of your [m
 
 ## Configure your sht3xd sensor
 
-On the new component panel, copy and paste the following attribute template into your sensors’s attributes field:
+Copy and paste the following attributes into your JSON configuration:
 
 ```json
 {
