@@ -1,4 +1,4 @@
-name: Build and Publish RC
+name: Build and Publish
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -23,17 +23,17 @@ jobs:
       matrix:
         include:
           - arch: buildjet-8vcpu-ubuntu-2204
-            image: ghcr.io/viamrobotics/rdk-devenv:amd64-cache
             platform: linux/amd64
-            label: amd64
+            goarch: amd64
           - arch: buildjet-8vcpu-ubuntu-2204-arm
-            image: ghcr.io/viamrobotics/rdk-devenv:arm64-cache
             platform: linux/arm64
-            label: arm64
+            goarch: arm64
+          - arch: buildjet-8vcpu-ubuntu-2204-arm
+            platform: linux/arm32v6
+            goarch: arm
+            goarm: '6'
 
     runs-on: ${{ matrix.arch }}
-    container:
-      image: ${{ matrix.image }}
 
     steps:
     - uses: actions/checkout@v3
@@ -41,11 +41,10 @@ jobs:
     - name: Set up Go
       uses: actions/setup-go@v2
       with:
-        go-version: 1.23
+        go-version-file: go.mod
 
     - name: Build module
-      run: |
-        sudo -u testbot bash -lc 'make module'
+      run: GOARCH=${{ matrix.goarch }} GOARM=${{ matrix.goarm }} make module
 
     - name: Upload sensirion module to registry
       uses: viamrobotics/upload-module@main
@@ -53,6 +52,6 @@ jobs:
         meta-path: meta.json
         module-path: bin/module.tar.gz
         platform: ${{ matrix.platform }}
-        version: ${{ github.ref_name }}
+        version: ${{ github.event_name == 'push' && github.ref_name || '' }}
         key-id: ${{ secrets.VIAM_DEV_API_KEY_ID }}
         key-value: ${{ secrets.VIAM_DEV_API_KEY }}
