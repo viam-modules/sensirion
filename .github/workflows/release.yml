@@ -49,6 +49,6 @@ jobs:
         meta-path: meta.json
         module-path: bin/module.tar.gz
         platform: ${{ matrix.platform }}
-        version: ${{ github.event_name == 'push' && github.ref_name || '' }}
+        version: ${{ github.event_name == 'push' && github.ref_name || '""' }}
         key-id: ${{ secrets.VIAM_DEV_API_KEY_ID }}
         key-value: ${{ secrets.VIAM_DEV_API_KEY }}
