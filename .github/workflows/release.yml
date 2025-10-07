@@ -52,3 +52,4 @@ jobs:
         version: ${{ github.event_name == 'push' && github.ref_name || '""' }}
         key-id: ${{ secrets.VIAM_DEV_API_KEY_ID }}
         key-value: ${{ secrets.VIAM_DEV_API_KEY }}
+        do-upload: ${{ github.event_name == 'push' }}
