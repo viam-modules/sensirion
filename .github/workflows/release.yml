@@ -11,11 +11,11 @@ on:
 # Don't forget to tag back to @main before merge.
 
 jobs:
-  # test:
-  #   uses: ./.github/workflows/test.yml
+  test:
+    uses: ./.github/workflows/test.yml
 
   publish:
-    # needs: test
+    needs: test
     strategy:
       matrix:
         include:
