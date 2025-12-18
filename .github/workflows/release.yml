@@ -25,11 +25,12 @@ jobs:
           - arch: buildjet-8vcpu-ubuntu-2204-arm
             platform: linux/arm64
             label: arm64
+            goarch: arm64
           - arch: buildjet-8vcpu-ubuntu-2204-arm
             image: ghcr.io/viamrobotics/rdk-devenv:armhf-cache
             platform: linux/armv7l
             label: armv7l
-            goarch: arm64
+            goarch: arm
           - arch: buildjet-8vcpu-ubuntu-2204-arm
             platform: linux/arm32v6
             goarch: arm
