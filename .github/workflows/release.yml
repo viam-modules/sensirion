@@ -19,13 +19,13 @@ jobs:
     strategy:
       matrix:
         include:
-          - arch: buildjet-8vcpu-ubuntu-2204
+          - arch: ubuntu-large
             platform: linux/amd64
             goarch: amd64
-          - arch: buildjet-8vcpu-ubuntu-2204-arm
+          - arch: github-linux-arm64-8core
             platform: linux/arm64
             goarch: arm64
-          - arch: buildjet-8vcpu-ubuntu-2204-arm
+          - arch: github-linux-arm64-8core
             platform: linux/arm32v6
             goarch: arm
             goarm: '6'
