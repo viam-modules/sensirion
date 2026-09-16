@@ -223,3 +223,33 @@
     :why:
     :versions: []
     :when: 2024-12-03 20:21:04.946556000 Z
+- - :permit
+  - Mozilla Public License 2.0
+  - :who:
+    :why:
+    :versions: []
+    :when: 2026-08-19 18:43:08.311627300 Z
+- - :approve
+  - codeberg.org/go-fonts/liberation
+  - :who:
+    :why: relocated from github.com/go-fonts/liberation (New BSD)
+    :versions: []
+    :when: 2026-08-19 18:45:34.118856729 Z
+- - :approve
+  - codeberg.org/go-latex/latex
+  - :who:
+    :why: relocated from github.com/go-latex/latex (New BSD)
+    :versions: []
+    :when: 2026-08-19 18:45:34.417205447 Z
+- - :approve
+  - github.com/hashicorp/go-getter
+  - :who:
+    :why:
+    :versions: []
+    :when: 2026-08-19 18:45:34.642002105 Z
+- - :approve
+  - github.com/hashicorp/go-version
+  - :who:
+    :why:
+    :versions: []
+    :when: 2026-08-19 18:45:34.867529713 Z
